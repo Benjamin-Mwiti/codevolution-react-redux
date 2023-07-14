@@ -10,13 +10,15 @@ function UserContainer({ userData, fetchUsers }) {
   return (
     <div className='store__container'>
         <h2>User Container</h2>
-        {
-            userData.loading
-                ? <p>Loading...</p>
-                : userData.error
-                    ? <p>{userData.error}</p>
-                    : userData && userData.users && userData.users.map( (user, index) => <p key={index}>{user.name}</p>)
-        }
+        <div className='store__container__users'>
+            {
+                userData.loading
+                    ? <p>Loading...</p>
+                    : userData.error
+                        ? <p>{userData.error}</p>
+                        : userData && userData.users && userData.users.map( (user, index) => <p key={index}>{user.name}</p>)
+            }
+        </div>
     </div>
   )
 }

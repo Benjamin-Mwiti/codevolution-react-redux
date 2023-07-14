@@ -24,14 +24,27 @@ body {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    grid-column-gap: 100px;
     padding: 20px;
 }
 
 .store__container {
-    width: 40vw;
+    width: 100%;
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid green;
+}
+
+.store__container:last-child {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.store__container__users {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, minmax(auto, 1fr));
 }
 
 h2 {
@@ -48,9 +61,6 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, minmax(15vw, 2fr)); */
     width: 100%;
 }
 
