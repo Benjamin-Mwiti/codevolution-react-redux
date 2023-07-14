@@ -3,7 +3,7 @@ const { createStore, applyMiddleware } = require('redux');
 const { default: thunk } = require('redux-thunk')
 
 // initialState
-const initialState = {
+export const initialState = {
     loading: false,
     users: [],
     error: ''
@@ -84,7 +84,7 @@ const fetchUsers = () => {
 }
 
 // Create store
-const store = createStore(reducer, applyMiddleware(thunk));
+export const store = createStore(reducer, applyMiddleware(thunk));
 console.log(store.getState())
 store.subscribe(() => { console.log(store.getState()) })
 store.dispatch(fetchUsers())

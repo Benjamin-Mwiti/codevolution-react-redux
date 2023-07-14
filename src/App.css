@@ -3,13 +3,73 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Console', monospace;
+    color: green;
 }
 
 body {
     background-color: black;
-    color: green;
 }
 
 .app {
+    padding: 20px;
+}
+
+.project__name {
+    width: fit-content;
+    margin: auto;
+    border-bottom: 2px solid green;
+}
+
+.redux__components {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    padding: 20px;
+}
+
+.store__container {
+    width: 40vw;
+    padding: 20px;
     text-align: center;
+    border-bottom: 1px solid green;
+}
+
+h2 {
+    margin: auto;
+    width: fit-content;
+    border-bottom: 2px dotted green;
+}
+
+p {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, minmax(15vw, 2fr)); */
+    width: 100%;
+}
+
+form>* {
+    margin: 0 10px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid green;
+    outline: none;
+    background: none;
+}
+
+button {
+    padding: 10px;
+    width: fit-content;
+    border: 2px solid green;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }
